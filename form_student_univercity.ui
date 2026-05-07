@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1143</width>
+    <height>606</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="student_id_box">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>70</y>
+      <width>231</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="student_id">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>70</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>รหัสนักศึกษา</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="firstname">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>130</y>
+      <width>31</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>ชื่อ</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="firstname_box">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>140</y>
+      <width>231</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lastname">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>190</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>นามสกุล</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lastname_box">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>200</y>
+      <width>231</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sex">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>270</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>เพศ</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="male">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>280</y>
+      <width>98</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ชาย</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="femalle">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>280</y>
+      <width>98</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>หญิง</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="major">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>350</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>สาขาวิชา</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="major_box">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>350</y>
+      <width>231</width>
+      <height>26</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>440</y>
+      <width>361</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>ล้าง</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>ลบ</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>แก้ไข</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="text">
+        <string>บันทึก</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menu_button">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1143</width>
+     <height>33</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="menu_button_2"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
