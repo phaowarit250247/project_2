@@ -11,19 +11,27 @@
 from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QHBoxLayout, QLabel,
-    QLineEdit, QMainWindow, QMenuBar, QPushButton,
-    QRadioButton, QSizePolicy, QStatusBar, QWidget)
+from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
+from PySide6.QtWidgets import (QApplication, QComboBox, QGroupBox, QHBoxLayout,
+    QLabel, QLineEdit, QMainWindow, QMenu,
+    QMenuBar, QPushButton, QRadioButton, QSizePolicy,
+    QStatusBar, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(1143, 606)
+        self.actionopen = QAction(MainWindow)
+        self.actionopen.setObjectName(u"actionopen")
+        self.actionNew = QAction(MainWindow)
+        self.actionNew.setObjectName(u"actionNew")
+        self.actionExit = QAction(MainWindow)
+        self.actionExit.setObjectName(u"actionExit")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.student_id_box = QLineEdit(self.centralwidget)
@@ -93,14 +101,24 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout.addWidget(self.pushButton_4)
 
+        self.groupBox = QGroupBox(self.centralwidget)
+        self.groupBox.setObjectName(u"groupBox")
+        self.groupBox.setGeometry(QRect(260, 40, 441, 381))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menu_button = QMenuBar(MainWindow)
         self.menu_button.setObjectName(u"menu_button")
         self.menu_button.setGeometry(QRect(0, 0, 1143, 33))
+        self.menuopen = QMenu(self.menu_button)
+        self.menuopen.setObjectName(u"menuopen")
         MainWindow.setMenuBar(self.menu_button)
         self.menu_button_2 = QStatusBar(MainWindow)
         self.menu_button_2.setObjectName(u"menu_button_2")
         MainWindow.setStatusBar(self.menu_button_2)
+
+        self.menu_button.addAction(self.menuopen.menuAction())
+        self.menuopen.addAction(self.actionopen)
+        self.menuopen.addAction(self.actionNew)
+        self.menuopen.addAction(self.actionExit)
 
         self.retranslateUi(MainWindow)
 
@@ -109,6 +127,9 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.actionopen.setText(QCoreApplication.translate("MainWindow", u"0pen", None))
+        self.actionNew.setText(QCoreApplication.translate("MainWindow", u"New", None))
+        self.actionExit.setText(QCoreApplication.translate("MainWindow", u"Exit", None))
         self.student_id.setText(QCoreApplication.translate("MainWindow", u"\u0e23\u0e2b\u0e31\u0e2a\u0e19\u0e31\u0e01\u0e28\u0e36\u0e01\u0e29\u0e32", None))
         self.firstname.setText(QCoreApplication.translate("MainWindow", u"\u0e0a\u0e37\u0e48\u0e2d", None))
         self.lastname.setText(QCoreApplication.translate("MainWindow", u"\u0e19\u0e32\u0e21\u0e2a\u0e01\u0e38\u0e25", None))
@@ -120,5 +141,7 @@ class Ui_MainWindow(object):
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"\u0e25\u0e1a", None))
         self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"\u0e41\u0e01\u0e49\u0e44\u0e02", None))
         self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"\u0e1a\u0e31\u0e19\u0e17\u0e36\u0e01", None))
+        self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"\u0e02\u0e49\u0e2d\u0e21\u0e39\u0e25\u0e19\u0e31\u0e01\u0e28\u0e36\u0e01\u0e29\u0e32", None))
+        self.menuopen.setTitle(QCoreApplication.translate("MainWindow", u"file", None))
     # retranslateUi
 

@@ -215,6 +215,19 @@
      </item>
     </layout>
    </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>40</y>
+      <width>441</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>ข้อมูลนักศึกษา</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menu_button">
    <property name="geometry">
@@ -225,8 +238,32 @@
      <height>33</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuopen">
+    <property name="title">
+     <string>file</string>
+    </property>
+    <addaction name="actionopen"/>
+    <addaction name="actionNew"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuopen"/>
   </widget>
   <widget class="QStatusBar" name="menu_button_2"/>
+  <action name="actionopen">
+   <property name="text">
+    <string>0pen</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
